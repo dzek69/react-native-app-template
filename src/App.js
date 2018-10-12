@@ -3,7 +3,10 @@ import { Text, View } from "react-native";
 
 import styles from "./App.styles";
 
-export default class App extends Component {
+/**
+ * App main component. This description is added for documentation generating demo.
+ */
+class App extends Component {
     constructor() {
         super();
         this.state = {
@@ -13,12 +16,23 @@ export default class App extends Component {
         this._handleHelloTap = this._handleHelloTap.bind(this);
     }
 
-    _handleHelloTap() {
+    /**
+     * Tap event handler, increases counter
+     *
+     * @param {Object} event - event info
+     * @private
+     */
+    _handleHelloTap(event) {
         this.setState({
             counter: this.state.counter + 1,
         });
     }
 
+    /**
+     * Renders component.
+     *
+     * @returns {React.Element}
+     */
     render() {
         return (
             <View style={styles.container}>
@@ -28,3 +42,5 @@ export default class App extends Component {
         );
     }
 }
+
+export default App;
