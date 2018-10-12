@@ -1,5 +1,40 @@
 {
   "name": "app",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "react-native start --reset-cache",
+    "start:android": "react-native run-android",
+    "start:ios": "react-native run-ios",
+    "build:release:android": "cd android && ./gradlew assembleRelease && cd ..",
+    "prepareDevice:dzek": "adb -s 67d29093 reverse tcp:8081 tcp:8081",
+    "test": "jest",
+    "lint": "eslint src/**/*.js src/*.js test/**/*.js test/*.js ./*.js",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "react": "16.5.0",
+    "react-native": "^0.57.2"
+  },
+  "devDependencies": {
+    "@dzek69/eslint-config-base": "^0.0.1",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.6.1",
+    "jest": "^23.6.0",
+    "metro-react-native-babel-preset": "0.48.0",
+    "must": "^0.13.4",
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "16.5.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "setupFiles": [
+      "<rootDir>/test/bootstrap.js"
+    ]
+  }
 }
