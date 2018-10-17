@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.0.3] - 2018-10-17
+### Changed
+- Added react and react-native code linting
+
 ## [0.0.2] - 2018-10-12
 ### Changed
 - Added `docs` dir to `.gitignore`

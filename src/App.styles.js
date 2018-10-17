@@ -1,15 +1,18 @@
 import { StyleSheet } from "react-native";
 
+const containerBackground = "#F5FCFF";
+const textColor = "#333333";
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#F5FCFF",
+        backgroundColor: containerBackground,
     },
     big: {
         textAlign: "center",
-        color: "#333333",
+        color: textColor,
         marginBottom: 5,
         fontSize: 30,
     },
