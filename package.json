@@ -1,14 +1,15 @@
 {
   "name": "app",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "start": "react-native start --reset-cache",
     "start:android": "react-native run-android",
     "start:ios": "react-native run-ios",
-    "build:release:android": "cd android && ./gradlew assembleRelease && cd ..",
     "build:docs": "node build-scripts/docs && jsdoc src README.md -t node_modules/docdash -d ./docs -u ./tutorials && node build-scripts/docs.after",
-    "prepareDevice:dzek": "adb -s 67d29093 reverse tcp:8081 tcp:8081",
+    "build:release:android": "cd android && ./gradlew assembleRelease && cd ..",
+    "prepareDevice:dzek3": "adb -s Q8W8TWHUDMBYRKFQ reverse tcp:8081 tcp:8081",
+    "prepareDevice:dzek5": "adb -s 67d29093 reverse tcp:8081 tcp:8081",
     "test": "jest",
     "lint": "eslint src/**/*.js src/*.js test/**/*.js test/*.js ./*.js",
     "lint:fix": "npm run lint -- --fix"

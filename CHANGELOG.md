@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.0.4] - 2018-11-06
+### Added
+- Example key for building release versions
+- DO NOT USE FOR PRODUCTION APPS.
+
 ## [0.0.3] - 2018-10-17
 ### Changed
 - Added react and react-native code linting
