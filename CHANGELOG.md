@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.0.5] - 2018-12-13
+### Changed
+- updated eslint config versions
+- updated react-native and corresponding react libraries
+
+### Fixed
+- almost all warnings during deps install (added missing dep, set right react versions)
+
 ## [0.0.4] - 2018-11-06
 ### Added
 - Example key for building release versions
