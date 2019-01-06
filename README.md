@@ -28,4 +28,8 @@ add your device here because you'll need to repeat that every time you reconnect
 - `lint` - checks for js code style 
 - `lint:fix` - checks for js code style, fixing it automatically where possible 
 
+## TODO
+
+- fix tests crashing when tested file imports an es module (file with an `export` statement)
+
 [1]: https://facebook.github.io/react-native/docs/running-on-device#connecting-to-the-development-server-1
