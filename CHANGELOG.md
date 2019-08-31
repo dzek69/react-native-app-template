@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 ### Changed
 - updated a lot of deps
+- upgraded react-native to 0.59.0
 - README
 ### Fixed
 - most audit warnings
