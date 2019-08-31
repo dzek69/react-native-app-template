@@ -5,7 +5,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [UNRELEASED]
 ### Changed
+- updated a lot of deps
 - README
+### Fixed
+- most audit warnings
+- some potential unit test issues related to must.js
 
 ## [0.0.5] - 2018-12-13
 ### Changed

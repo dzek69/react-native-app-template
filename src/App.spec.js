@@ -20,7 +20,7 @@ describe("App Component", () => {
         const texts = component.find(Text);
 
         const firstText = texts.at(1).render();
-        firstText.text().must.equal("Tap counter: 0");
+        firstText.text().must.equal("Taps counter: 0");
 
         component.unmount();
     });
@@ -32,19 +32,19 @@ describe("App Component", () => {
         const firstText = texts.at(0);
         const secondText = texts.at(1);
         firstText.simulate("press");
-        component.find(Text).at(1).render().text().must.equal("Tap counter: 1");
+        component.find(Text).at(1).render().text().must.equal("Taps counter: 1");
 
         firstText.simulate("press");
-        component.find(Text).at(1).render().text().must.equal("Tap counter: 2");
+        component.find(Text).at(1).render().text().must.equal("Taps counter: 2");
 
         firstText.simulate("press");
         secondText.simulate("press");
-        component.find(Text).at(1).render().text().must.equal("Tap counter: 4");
+        component.find(Text).at(1).render().text().must.equal("Taps counter: 4");
 
         secondText.simulate("press");
         secondText.simulate("press");
         secondText.simulate("press");
-        component.find(Text).at(1).render().text().must.equal("Tap counter: 7");
+        component.find(Text).at(1).render().text().must.equal("Taps counter: 7");
 
         component.unmount();
     });

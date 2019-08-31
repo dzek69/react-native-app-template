@@ -38,8 +38,7 @@ class App extends Component {
             <View style={styles.container}>
                 <Text style={styles.big} onPress={this._handleHelloTap}>Hello World!</Text>
                 <Text style={styles.big} onPress={this._handleHelloTap}>
-                    Taps counter:
-                    {this.state.counter}
+                    Taps counter: {this.state.counter}
                 </Text>
             </View>
         );
