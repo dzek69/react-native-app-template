@@ -4,12 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED]
+- nothing yet
+
+## [0.1.0] - 2019-06-31
 ### Changed
 - updated a lot of deps
-- upgraded react-native to 0.59.0
+- upgraded react-native to current / 0.60.5
 - README
 ### Fixed
-- most audit warnings
+- audit warnings
 - some potential unit test issues related to must.js
 
 ## [0.0.5] - 2018-12-13

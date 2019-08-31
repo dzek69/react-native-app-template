@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-native start --reset-cache",
@@ -15,8 +15,8 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "react": "16.8.3",
-    "react-native": "0.59.0"
+    "react": "16.8.6",
+    "react-native": "0.60.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -32,10 +32,10 @@
     "eslint-plugin-react-native": "^3.7.0",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.3",
-    "metro-react-native-babel-preset": "0.51.0",
+    "metro-react-native-babel-preset": "0.56.0",
     "must": "^0.13.4",
-    "react-dom": "16.8.3",
-    "react-test-renderer": "16.8.3"
+    "react-dom": "16.8.6",
+    "react-test-renderer": "16.8.6"
   },
   "jest": {
     "preset": "react-native",
