@@ -15,6 +15,10 @@ Enzyme and must.js
 1. Prepare your device [by forwarding development server port][1] - add your device id to `prepareDevice:*` commands
 1. Run `yarn start:android`
 
+## To rename application and change app id use
+
+[react-native-app-rename][2]
+
 ## `yarn run` commands list:
 
 - `start` - cleans cache and starts development packaging server (Metro) - **always run this after switching project
@@ -35,3 +39,4 @@ add your device here because you'll need to repeat that every time you reconnect
 - fix tests crashing when tested file imports an es module (file with an `export` statement)
 
 [1]: https://facebook.github.io/react-native/docs/running-on-device#connecting-to-the-development-server-1
+[2]: https://www.npmjs.com/package/react-native-app-rename
