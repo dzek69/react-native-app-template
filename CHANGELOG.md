@@ -4,10 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED]
+- nothing yet
+
+## [0.2.0] - 2019-09-01
 ### Added
 - building separate apk per architecture (including universal apk)
+- hermes engine check on template App (for future releases)
+- pre-push hook with code quality check
+### Fixed
+- unneeded permissions of the release app removed
+- support for eslint for Windows
 
-## [0.1.0] - 2019-06-31
+## [0.1.0] - 2019-08-31
 ### Changed
 - updated a lot of deps
 - upgraded react-native to current / 0.60.5

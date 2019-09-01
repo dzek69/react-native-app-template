@@ -34,9 +34,11 @@ class App extends Component {
      * @returns {React.Element}
      */
     render() {
+        const hermes = String(Boolean(global.HermesInternal));
         return (
             <View style={styles.container}>
                 <Text style={styles.big} onPress={this._handleHelloTap}>Hello World!</Text>
+                <Text style={styles.big} onPress={this._handleHelloTap}>Hermes enabled? {hermes}</Text>
                 <Text style={styles.big} onPress={this._handleHelloTap}>
                     Taps counter: {this.state.counter}
                 </Text>

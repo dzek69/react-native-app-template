@@ -1,18 +1,19 @@
 {
   "name": "app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "react-native start --reset-cache",
     "start:android": "react-native run-android",
     "start:ios": "react-native run-ios",
-    "build:docs": "node build-scripts/docs && jsdoc src README.md -t node_modules/docdash -d ./docs -u ./tutorials && node build-scripts/docs.after",
+    "docs": "node build-scripts/docs && jsdoc -r src README.md -t node_modules/docdash -d ./docs -u ./tutorials -c jsdoc.json && node build-scripts/docs.after",
     "build:release:android": "cd android && ./gradlew assembleRelease && cd ..",
     "prepareDevice:dzek3": "adb -s Q8W8TWHUDMBYRKFQ reverse tcp:8081 tcp:8081",
     "prepareDevice:dzek5": "adb -s 67d29093 reverse tcp:8081 tcp:8081",
-    "test": "jest",
-    "lint": "eslint src/**/*.js src/*.js test/**/*.js test/*.js ./*.js",
-    "lint:fix": "npm run lint -- --fix"
+    "test": "cross-env NODE_ENV=testing jest",
+    "lint": "cross-env eslint --report-unused-disable-directives  'src/**/*.js' 'src/*.js' 'test/**/*.js' 'test/*.js' './*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "checkCodeQuality": "yarn lint && yarn test && yarn docs"
   },
   "dependencies": {
     "react": "16.8.6",
@@ -23,13 +24,14 @@
     "@dzek69/eslint-config-base": "^1.0.1",
     "@dzek69/eslint-config-react": "^1.1.0",
     "@dzek69/eslint-config-react-native": "^1.1.0",
-    "cross-env": "^5.2.0",
+    "cross-env": "^5.2.1",
     "docdash": "^1.1.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.2.2",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-native": "^3.7.0",
+    "husky": "^3.0.4",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.3",
     "metro-react-native-babel-preset": "0.56.0",
@@ -45,5 +47,10 @@
     "setupFiles": [
       "<rootDir>/test/bootstrap.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn checkCodeQuality"
+    }
   }
 }
