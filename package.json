@@ -16,8 +16,8 @@
     "checkCodeQuality": "yarn lint && yarn test && yarn docs"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react": "16.9.0",
+    "react-native": "0.61.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
